@@ -1,6 +1,6 @@
 ---
 title: "Gov 50 Final Project"
-author: "Your Name Here"
+author: "Mia Lupica"
 description: "My final project"
 output:
   distill::distill_article:
@@ -11,4 +11,4 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to...
+I am interested in if sociopolitical belief systems around reproductive health play a causal role in real health outcomes. For example, if conservative household that are less favorable towards funding reproductive health resources (i.e. Planned Parenthood) have poorer, equal, or higher feminine reproductive health outcomes as a household that does support those measures. I am planning on comparing data is social or political views on feminine health versus health measures in a demographic area.
