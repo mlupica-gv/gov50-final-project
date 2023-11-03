@@ -9,10 +9,41 @@ output:
 
 
 
-## Project thoughts
+Project thoughts:
 
 I am interested in if sociopolitical belief systems around reproductive health play a causal role in real health outcomes. For example, if conservative household that are less favorable towards funding reproductive health resources (i.e. Planned Parenthood) have poorer, equal, or higher feminine reproductive health outcomes as a household that does support those measures. I am planning on comparing data is social or political views on feminine health versus health measures in a demographic area.
 
-##Milestone 2
+Milestone 2:
 
 The data set I am using is CDC's Chronic disease indicators from August 2023. My research question is if being of Hispanic ethnicity elevates the risk of certain non-communicable diseases. I hypothesize that because of potential cultural differences in diet, there will be a difference in rates of certain non-communicable diseases for Hispanic and non-Hispanic ethnicities. My explanatory variable of interest is "Race/Ethnicity" which codes both under the same category. For the purposes of this analysis, any label with "Hispanic" will be our Hispanic ethnicity group. Any label with "non-Hispanic" will be used for our non Hispanic ethnic groups. Our outcome variable of interest are the proportion of each ethnic group in each category of NCDs (non communicable diseases). Each category of NCDs is coded under the variable "Topic", which includes alcohol as a disease topic for example. If across each category of NCD, there was little fluctuation in proportion of Hispanic participants (ie little deviation from the mean), that pattern would disprove my hypothesis. However, if there was a significant deviation from the mean of the disease category proportions, that would support my hypothesis by proving a specific disease category has more ethnic susceptibility.
+
+Milestone 3:
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+
+cdi <- read_csv("C:/Users/18mia/Downloads/U.S._Chronic_Disease_Indicators__CDI_.csv")
+
+hisp_data <- cdi |>
+  filter(Stratification1 == "Hispanic")
+
+hisp_plot <- hisp_data|>
+  ggplot(mapping = aes(y = Topic)) + geom_bar(fill = "lightblue")+ labs(y= "Chronic Disease Category", x = "Reported Counts", title = "Chronic Disease Recorded in Hispanic Populations", caption = "Center for Disease Control and Prevention")
+
+hisp_plot
+
+```
+
+
+
+```{r}
+
+overall_plot <- cdi|>
+  ggplot(mapping = aes(y= Topic)) + geom_bar( fill = "royalblue4") + labs(y= "Chronic Disease Category", x = "Reported Counts", title = "Chronic Disease Recorded in General Population", caption = "Center for Disease Control and Prevention")
+
+overall_plot
+
+
+```
