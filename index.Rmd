@@ -47,3 +47,35 @@ overall_plot
 
 
 ```
+
+
+```{r}
+
+table1 <- cdi|>
+  filter(DataValueType != "Number" & DataValueType != "Percent")|>
+  mutate(
+    race = case_when(
+      Stratification1 == "Hispanic" ~ 1,
+      Stratification1 == "White, non-Hispanic" ~ 0
+    ))|>
+  group_by(race, Topic)|>
+  drop_na(DataValueAlt, race)|>
+  summarize(
+    dis_mean = mean(DataValueAlt, na.rm = TRUE)
+  )|>
+  pivot_wider(
+    names_from = race,
+    values_from = dis_mean
+  )|>
+  mutate(
+    ATE = `1` - `0`
+  )
+
+table 1
+
+knitr::kable(table1, col.names = c("Chronic Disease", "White, non-Hispanic", "Hispanic", "ATE"))
+
+```
+
+I narrowed my analysis to only compare non-Hispanic White people and Hispanic people, because I thought that when comparing Hispanics against the general population, the gen pop might include health disparities in other races that would confound the comparison. I also removed all data values that were numerical counts or percents to leave the only data value type as rates, averages, or proportions, so that comparing these rates were standardized. The ATE shows the difference in means of chronic disease prevalence in each racial group. Notably, for disability, Nutrition/Physical Activity, Older Adults, and Oral Health, the ATE was positive, indicating higher prevalence among Hispanics in the US. However, many of the other ATE's were significantly negative, indicating that White Americans experience some chronic diseases at higher rates than Hispanics.
+

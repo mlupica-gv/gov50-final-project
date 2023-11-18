@@ -1,0 +1,70 @@
+---
+title: "Data Sets"
+output: html_document
+date: "2023-11-02"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+
+library(readr)
+library(dplyr)
+library(tidyverse)
+
+cdi <- read_csv("C:/Users/18mia/Downloads/U.S._Chronic_Disease_Indicators__CDI_.csv")
+
+hisp_data <- cdi |>
+  filter(Stratification1 == "Hispanic")
+
+hisp_data
+
+```
+```{r}
+hisp_plot <- hisp_data|>
+  ggplot(mapping = aes(x = TopicID)) + geom_bar(fill = "lightblue")+ labs(x= "Chronic Disease Category", y = "Reported Counts", title = "Chronic Disease Recorded in Hispanic Populations")
+
+hisp_plot
+
+overall_plot <- cdi|>
+  ggplot(mapping = aes(x= TopicID)) + geom_bar( fill = "royalblue4") + labs(x= "Chronic Disease Category", y = "Reported Counts", title = "Chronic Disease Recorded in General Population")
+
+overall_plot
+```
+```{r}
+
+cdi|>
+  group_by(Stratification1, Topic)|>
+  lm(DataValue ~ Stratification 1, na.rm = TRUE)
+```
+
+
+```{r}
+
+library(readxl)
+word_gender <- read_excel("C:/Users/18mia/Downloads/Appendix_-_Word_Rating_File (2).xlsx")
+View(Appendix_Word_Rating_File_2_)
+
+```

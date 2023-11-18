@@ -1549,6 +1549,152 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>table1</span> <span class='op'>&lt;-</span> <span class='va'>cdi</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>DataValueType</span> <span class='op'>!=</span> <span class='st'>"Number"</span> <span class='op'>&amp;</span> <span class='va'>DataValueType</span> <span class='op'>!=</span> <span class='st'>"Percent"</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    race <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>      <span class='va'>Stratification1</span> <span class='op'>==</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='fl'>1</span>,</span>
+<span>      <span class='va'>Stratification1</span> <span class='op'>==</span> <span class='st'>"White, non-Hispanic"</span> <span class='op'>~</span> <span class='fl'>0</span></span>
+<span>    <span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>race</span>, <span class='va'>Topic</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, <span class='va'>race</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span></span>
+<span>    dis_mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
+<span>    names_from <span class='op'>=</span> <span class='va'>race</span>,</span>
+<span>    values_from <span class='op'>=</span> <span class='va'>dis_mean</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    ATE <span class='op'>=</span> <span class='va'>`1`</span> <span class='op'>-</span> <span class='va'>`0`</span></span>
+<span>  <span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Chronic Disease"</span>, <span class='st'>"White, non-Hispanic"</span>, <span class='st'>"Hispanic"</span>, <span class='st'>"ATE"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<table>
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 21%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Chronic Disease</th>
+<th style="text-align: right;">White, non-Hispanic</th>
+<th style="text-align: right;">Hispanic</th>
+<th style="text-align: right;">ATE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Alcohol</td>
+<td style="text-align: right;">13.72061</td>
+<td style="text-align: right;">13.584377</td>
+<td style="text-align: right;">-0.1362323</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arthritis</td>
+<td style="text-align: right;">35.54053</td>
+<td style="text-align: right;">32.775589</td>
+<td style="text-align: right;">-2.7649402</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asthma</td>
+<td style="text-align: right;">40.21025</td>
+<td style="text-align: right;">20.209930</td>
+<td style="text-align: right;">-20.0003223</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cancer</td>
+<td style="text-align: right;">2067.06197</td>
+<td style="text-align: right;">277.461730</td>
+<td style="text-align: right;">-1789.6002399</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cardiovascular Disease</td>
+<td style="text-align: right;">86.76416</td>
+<td style="text-align: right;">46.694109</td>
+<td style="text-align: right;">-40.0700462</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chronic Kidney Disease</td>
+<td style="text-align: right;">36.00080</td>
+<td style="text-align: right;">25.418735</td>
+<td style="text-align: right;">-10.5820689</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Chronic Obstructive Pulmonary Disease</td>
+<td style="text-align: right;">82.09785</td>
+<td style="text-align: right;">60.356771</td>
+<td style="text-align: right;">-21.7410780</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Diabetes</td>
+<td style="text-align: right;">53.81879</td>
+<td style="text-align: right;">44.954221</td>
+<td style="text-align: right;">-8.8645730</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disability</td>
+<td style="text-align: right;">34.74083</td>
+<td style="text-align: right;">38.219038</td>
+<td style="text-align: right;">3.4782059</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Immunization</td>
+<td style="text-align: right;">42.00507</td>
+<td style="text-align: right;">34.807638</td>
+<td style="text-align: right;">-7.1974278</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mental Health</td>
+<td style="text-align: right;">8.14045</td>
+<td style="text-align: right;">6.688671</td>
+<td style="text-align: right;">-1.4517791</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nutrition, Physical Activity, and Weight Status</td>
+<td style="text-align: right;">33.27427</td>
+<td style="text-align: right;">34.659581</td>
+<td style="text-align: right;">1.3853150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Older Adults</td>
+<td style="text-align: right;">29.61208</td>
+<td style="text-align: right;">33.693661</td>
+<td style="text-align: right;">4.0815817</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oral Health</td>
+<td style="text-align: right;">47.67893</td>
+<td style="text-align: right;">49.931631</td>
+<td style="text-align: right;">2.2527033</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Overarching Conditions</td>
+<td style="text-align: right;">117.95680</td>
+<td style="text-align: right;">83.152471</td>
+<td style="text-align: right;">-34.8043268</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reproductive Health</td>
+<td style="text-align: right;">65.95432</td>
+<td style="text-align: right;">59.966425</td>
+<td style="text-align: right;">-5.9878920</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tobacco</td>
+<td style="text-align: right;">31.27347</td>
+<td style="text-align: right;">23.368149</td>
+<td style="text-align: right;">-7.9053249</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>I narrowed my analysis to only compare non-Hispanic White people and Hispanic people, because I thought that when comparing Hispanics against the general population, the gen pop might include health disparities in other races that would confound the comparison. I also removed all data values that were numerical counts or percents to leave the only data value type as rates, averages, or proportions, so that comparing these rates were standardized. The ATE shows the difference in means of chronic disease prevalence in each racial group. Notably, for disability, Nutrition/Physical Activity, Older Adults, and Oral Health, the ATE was positive, indicating higher prevalence among Hispanics in the US. However, many of the other ATE’s were significantly negative, indicating that White Americans experience some chronic diseases at higher rates than Hispanics.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
