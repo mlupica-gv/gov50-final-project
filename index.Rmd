@@ -71,7 +71,7 @@ table1 <- cdi|>
     ATE = `1` - `0`
   )
 
-table 1
+table1
 
 knitr::kable(table1, col.names = c("Chronic Disease", "White, non-Hispanic", "Hispanic", "ATE"))
 

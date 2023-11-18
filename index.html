@@ -1571,7 +1571,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>    ATE <span class='op'>=</span> <span class='va'>`1`</span> <span class='op'>-</span> <span class='va'>`0`</span></span>
 <span>  <span class='op'>)</span></span>
 <span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Chronic Disease"</span>, <span class='st'>"White, non-Hispanic"</span>, <span class='st'>"Hispanic"</span>, <span class='st'>"ATE"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<span><span class='va'>table1</span></span></code></pre>
+</div>
+<pre><code># A tibble: 17 × 4
+   Topic                                           `0`    `1`      ATE
+   &lt;chr&gt;                                         &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+ 1 Alcohol                                      1.37e1  13.6  -1.36e-1
+ 2 Arthritis                                    3.55e1  32.8  -2.76e+0
+ 3 Asthma                                       4.02e1  20.2  -2.00e+1
+ 4 Cancer                                       2.07e3 277.   -1.79e+3
+ 5 Cardiovascular Disease                       8.68e1  46.7  -4.01e+1
+ 6 Chronic Kidney Disease                       3.60e1  25.4  -1.06e+1
+ 7 Chronic Obstructive Pulmonary Disease        8.21e1  60.4  -2.17e+1
+ 8 Diabetes                                     5.38e1  45.0  -8.86e+0
+ 9 Disability                                   3.47e1  38.2   3.48e+0
+10 Immunization                                 4.20e1  34.8  -7.20e+0
+11 Mental Health                                8.14e0   6.69 -1.45e+0
+12 Nutrition, Physical Activity, and Weight St… 3.33e1  34.7   1.39e+0
+13 Older Adults                                 2.96e1  33.7   4.08e+0
+14 Oral Health                                  4.77e1  49.9   2.25e+0
+15 Overarching Conditions                       1.18e2  83.2  -3.48e+1
+16 Reproductive Health                          6.60e1  60.0  -5.99e+0
+17 Tobacco                                      3.13e1  23.4  -7.91e+0</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Chronic Disease"</span>, <span class='st'>"White, non-Hispanic"</span>, <span class='st'>"Hispanic"</span>, <span class='st'>"ATE"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
 <colgroup>
@@ -1695,7 +1718,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </table>
 </div>
 <p>I narrowed my analysis to only compare non-Hispanic White people and Hispanic people, because I thought that when comparing Hispanics against the general population, the gen pop might include health disparities in other races that would confound the comparison. I also removed all data values that were numerical counts or percents to leave the only data value type as rates, averages, or proportions, so that comparing these rates were standardized. The ATE shows the difference in means of chronic disease prevalence in each racial group. Notably, for disability, Nutrition/Physical Activity, Older Adults, and Oral Health, the ATE was positive, indicating higher prevalence among Hispanics in the US. However, many of the other ATE’s were significantly negative, indicating that White Americans experience some chronic diseases at higher rates than Hispanics.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
