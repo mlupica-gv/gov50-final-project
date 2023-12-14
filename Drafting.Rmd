@@ -55,16 +55,32 @@ overall_plot
 ```
 ```{r}
 
-cdi|>
-  group_by(Stratification1, Topic)|>
-  lm(DataValue ~ Stratification 1, na.rm = TRUE)
+table1 <- cdi|>
+  mutate(
+    race = case_when(
+      Stratification1 == "Hispanic" ~ 1,
+      Stratification1 == "White, non-Hispanic" ~ 0
+    ))|>
+  group_by(race, Topic)|>
+  drop_na(DataValueAlt, race)|>
+  summarize(
+    dis_mean = mean(DataValueAlt, na.rm = TRUE)
+  )|>
+  pivot_wider(
+    names_from = race,
+    values_from = dis_mean
+  )|>
+  mutate(
+    ATE = `1` - `0`
+  )
+
+table1
+
+knitr::kable(table1, col.names = c("Chronic Disease", "White, non-Hispanic", "Hispanic", "ATE"))
+
 ```
-
-
 ```{r}
-
-library(readxl)
-word_gender <- read_excel("C:/Users/18mia/Downloads/Appendix_-_Word_Rating_File (2).xlsx")
-View(Appendix_Word_Rating_File_2_)
+View(cdi)
 
 ```
+
