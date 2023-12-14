@@ -80,7 +80,31 @@ knitr::kable(table1, col.names = c("Chronic Disease", "White, non-Hispanic", "Hi
 
 ```
 ```{r}
-View(cdi)
+unique(cdi$TopicID)
+```
+```{r}
+
+
+##old data
+
+hisp_data <- cdi |>
+  filter(Stratification1 == "Hispanic")
+
+hisp_plot <- hisp_data|>
+  mutate(
+   unit = if_else(DataValueUnit == "cases per 100,000" | DataValueUnit == "per 100,000 residents" | 
+                    DataValueUnit == "per 100,000", "100k", "Other"))|>
+  filter(unit == "100k")|>
+  ggplot(mapping = aes(y = Topic)) + geom_bar(fill = "lightblue")+ labs(y= "Chronic Disease Category", x = "Reported Counts", title = "Chronic Disease Recorded in Hispanic Populations", caption = "Center for Disease Control and Prevention")
+
+hisp_plot
+
+##
+overall_plot <- cdi|>
+  ggplot(mapping = aes(y= Topic)) + geom_bar( fill = "royalblue4") + labs(y= "Chronic Disease Category", x = "Reported Counts", title = "Chronic Disease Recorded in General Population", caption = "Center for Disease Control and Prevention")
+
+overall_plot
+
 
 ```
 
