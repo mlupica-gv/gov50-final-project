@@ -212,7 +212,7 @@ coef_map <-  c("(Intercept)" = "(Intercept)",
                           "R2 Adj." = "R2 Adj.")
 
 tab <- modelsummary(models, coef_map = coef_map, output = "flextable",
-             title = "Chronic Disease Indicators in Hispanic vs Non-Hispanic Mortality", 
+             title = "Mean Chronic Disease Indicators in Hispanic vs Non-Hispanic Populations", 
              statistic = c("s.e. = {std.error}",
                                   "p = {p.value}"),
                            gof_map = c("nobs", "r.squared", "adj.r.squared"))
@@ -224,7 +224,7 @@ tab|>
 ```
 Here is the regression table of each of the chronic disease categories, adjusted for the variable of year to ensure that time was not a confounding variable. A brief note on conditioning for the year variable is that the year data was collected did seem to have a stastistically significant effect in several of the CD indicators (alcohol, kidney disease, diabetes). The coefficients on this variable represent that if "Hispanic" was held constant, there would be slight change from each group due to the variability of year. And this could be related to external social phenomenon that is linked to higher rates of drinking + kidney disease, as well as a trend of higher rates of diabetes over time.
 
-The main coefficients of interest are the coefficients in the "Hispanic" row. These coefficients represent the percentage point change in chronic disease indicator rates, comparing the Hispanic group to the non-Hispanic group. For example, under the alcohol category, there is a 5.3 percentage point decrease in alcohol indicator rates in the Hispanic group to the non-Hispanic group. And, the cancer category shows there is a 2.6 percentage point increase in cancer indicator rates in the Hispanic group compared to the non-Hispanic group. I think among the results, what especially stands out is the very large percentage point decreases in the Hispanic group for cardiovascular, kidney, and pulmonary disease, as well as diabetes, compared to non-Hispanics. This represents that there is significantly lower rates of these chronic diseases in Hispanic populations than in non-Hispanic.
+The main coefficients of interest are the coefficients in the "Hispanic" row. These coefficients represent the percentage point change in chronic disease indicator rates, comparing the Hispanic group to the non-Hispanic group. In this case, being the Hispanic group is the independent variable which produces the outcome. For example, under the alcohol category, there is a 5.3 percentage point decrease in alcohol indicator rates in the Hispanic group, compared to the non-Hispanic group. And, the cancer category shows there is a 2.6 percentage point increase in cancer indicator rates in the Hispanic group compared to the non-Hispanic group. I think among the results, what especially stands out is the very large percentage point decreases in the Hispanic group for cardiovascular, kidney, and pulmonary disease, as well as diabetes, compared to non-Hispanics. This represents that there is significantly lower rates of these chronic diseases in Hispanic populations than in non-Hispanic.
 
 Despite these largely lower CD rates overall, the Hispanic group does a higher cancer rate. However, at an alpha level of 0.05, the cancer coefficient is not statistically significant, while the other coefficients for alcohol, kidney disease, and diabetes are extremely statistically significant (<0.001), and cardiovascular and pulmonary coefficients are statistically significant as well. 
 
