@@ -11,7 +11,7 @@ output:
 
 Chronic disease (CD) has become an especially elevated concern as longer lifespans, environmental and social determinants, and lifestyle (diet, etc) have contributed to high rates of cardiovascular disease, diabetes, and other CDs in the United States. The CDC reports that in 2018, more than half of adults in the US had a diagnosed chronic condition. Another study by Ragupathi & Ragupathi quantifies that 70% of deaths in the U.S are a result of chronic disease, and 75% of combined healthcare spending is spent on chronic disease.
 
-To combat rising chronic disease, Ragupathi & Ragupathi write that it is essential to correctly identify those at risk to create healthier outcomes.  As chronic disease is heavily influenced by social determinants of health, including living, working, and dietary environments, it is critical to examine another social determinant to identify those at risk — ethnicity. Many published reports show racial and ethnic disparities in various aspects of health. However, studying chronic disease in Hispanic populations was of particular interest to me, because of the speculation that immigrant communities more frequently work in manual labor, may be at risk for poorer food quality in low-income households, and that language barriers may pose an obstacle to healthcare access and education.
+To combat rising chronic disease, Ragupathi & Ragupathi write that it is essential to correctly identify those at risk to create healthier outcomes.  As chronic disease is heavily influenced by social determinants of health, including living, working, and dietary environments, it is critical to examine another social determinant to identify those at risk — ethnicity. Many published reports show racial and ethnic disparities in various aspects of health. However, studying chronic disease in Hispanic populations was of particular interest to me, because of the speculation that immigrant communities more frequently work in manual labor, may be at risk for poorer food quality in low-income households, and that language barriers may pose an obstacle to healthcare access and education (Torres).
 
 Therefore, the hypothesis of my investigation is that Hispanic people will disproportionately suffer from chronic diseases, due to the potential risk factors discussed above. 
 
@@ -253,6 +253,8 @@ Boersma P, Black LI, Ward BW. Prevalence of Multiple Chronic Conditions Among US
 "Hispanic Heritage Month: 2023." U.S. Census Bureau, 2023. https://www.census.gov/newsroom/facts-for-features/2023/hispanic-heritage-month.html
 
 Raghupathi, Wullianallur, and Viju Raghupathi. “An Empirical Study of Chronic Diseases in the United States: A Visual Analytics Approach.” International journal of environmental research and public health vol. 15,3 431. 1 Mar. 2018, doi:10.3390/ijerph15030431
+
+Torres, Luis. "Driving Health Equity for the Hispanic American Community." The Cigna Group. https://newsroom.thecignagroup.com/driving-health-equity-hispanic-american-community#:~:text=Social%20Determinants%20of%20Health%20and,bias%20in%20the%20medical%20profession.
 
 # Code
 
