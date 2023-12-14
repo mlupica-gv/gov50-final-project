@@ -37,7 +37,10 @@ overall_plot <- cdi|>
    unit = if_else(DataValueUnit == "cases per 100,000" | DataValueUnit == "per 100,000 residents" | 
                     DataValueUnit == "per 100,000", "100k", "Other"))|>
   filter(unit == "100k")|>
-  ggplot(mapping = aes(y = Topic)) + geom_bar(fill = 'royalblue4') + labs(x= "Total cases (per 100,000)", y = "CD Category", title = "Distribution of Chronic Disease Indicators") + theme_bw()
+  ggplot(mapping = aes(y = Topic)) + geom_bar(fill = 'royalblue4') + 
+  labs(
+    x= "Total cases (per 100,000)", y = "CD Category", title = "Distribution of Chronic Disease Indicators"
+    ) +  theme_bw()
 
 overall_plot
 
@@ -59,7 +62,12 @@ comp_Hisp <- cdi|>
     ))|>
   mutate(
     dis_mean = mean(DataValueAlt, na.rm = TRUE)
-  )
+  )|>
+  mutate(
+    race_chr = case_when(
+       Stratification1 == "Hispanic" ~ "Hispanic",
+      Stratification1 != "Hispanic" ~ "Non-Hispanic"
+    ))
 
 table1<- comp_Hisp|>
   group_by(race, Topic)|>
@@ -76,18 +84,28 @@ table1<- comp_Hisp|>
   )|>
   relocate(`0`, .after = `1`)
 
-
-knitr::kable(table1, col.names = c("Chronic Disease", "Hispanic", "Non-Hispanic", "Health Difference"))
+knitr::kable(table1, col.names = c("Chronic Disease", "Hispanic", "Non-Hispanic", "Difference in Means"))
 
 ```
-
 ```{r}
+library(scales) 
+
+comp_Hisp|>
+    group_by(race_chr, Topic)|>
+  drop_na(DataValueAlt, race_chr)|>
+  summarize(
+    dis_mean = mean(DataValueAlt, na.rm = TRUE)
+  )|>
+ggplot(mapping = aes(x = Topic, y = dis_mean, fill = race_chr)) + geom_col(position = "dodge") +
+  scale_fill_manual(values = c("maroon","turquoise4"))+
+    labs(x = "Chronic Disease Topic", y= "Average Cases (per 100,000)", fill = "Hispanic (Y/N)")+theme_bw()+
+   scale_x_discrete(labels = label_wrap(10))
 
 ```
 
-```{r echo=FALSE, results='hide',message=FALSE}
-library(infer)
 
+```{r echo=FALSE, results='hide'}
+library(infer)
 
 Alc <- comp_Hisp|>
   filter(Topic == "Alcohol")
@@ -206,30 +224,15 @@ tab|>
 ```
 Here is the regression table of each of the chronic disease categories, adjusted for the variable of year to ensure that time was not a confounding variable. 
 
-The main coefficients of interest are the coefficients in the "Hispanic" row. These coefficients represent the percentage point change in chronic disease indicator rates, comparing the Hispanic group to the non-Hispanic group. For example, under the alcohol category, there is a 5.3 percentage point decrease in alcohol indicator rates in the Hispanic group to the non-Hispanic group. And, the cancer category shows there is a 2.6 percentage point increase in cancer indicator rates in the Hispanic group compared to the non-Hispanic group. I think among the results, what especially stands out is the very large percentage point decreases in the Hispanic group for cardiovascular, kidney, and pulmonary disease, as well as diabetes, compared to non-Hispanics. Despite these largely lower CD rates overall, the Hispanic group has a higher cancer rate. However, at an alpha level of 0.05, the cancer coefficient is not statistically significant, while the other coefficients for alcohol, kidney disease, and diabetes are extremely statistically significant (<0.001), and cardiovascular and pulmonary coefficients are statistically significant as well.
+The main coefficients of interest are the coefficients in the "Hispanic" row. These coefficients represent the percentage point change in chronic disease indicator rates, comparing the Hispanic group to the non-Hispanic group. For example, under the alcohol category, there is a 5.3 percentage point decrease in alcohol indicator rates in the Hispanic group to the non-Hispanic group. And, the cancer category shows there is a 2.6 percentage point increase in cancer indicator rates in the Hispanic group compared to the non-Hispanic group. I think among the results, what especially stands out is the very large percentage point decreases in the Hispanic group for cardiovascular, kidney, and pulmonary disease, as well as diabetes, compared to non-Hispanics. Despite these largely lower CD rates overall, the Hispanic group has a higher cancer rate. However, at an alpha level of 0.05, the cancer coefficient is not statistically significant, while the other coefficients for alcohol, kidney disease, and diabetes are extremely statistically significant (<0.001), and cardiovascular and pulmonary coefficients are statistically significant as well. 
 
-Breaking down the data further, on a state level results are much less congruent than the national aggregates. Using the example of cardiovascular category, several states show strong increases in cardiovascular rates in Hispanic people, contrary to the strong negative coefficent as the national correlation estimate:
-
-```{r}
-
-library(rmarkdown)
-
-Card_lm <- lm(DataValueAlt ~ race + LocationDesc, data = Cardio)
-
-
-states <- modelsummary::modelsummary(Card_lm,
-                           statistic = c("s.e. = {std.error}",
-                                         "p = {p.value}"),
-                           gof_map = c("nobs", "r.squared", "adj.r.squared"))
-  
-states
-```
+The barplot helps visualize this finding, as the cancer disparity (dif in means) is visually smaller compared to the other bars'. "Overarching Conditions" is omitted in the regressions after the barplot because of its ambiguity in definition.
 
 <h1>Conclusion:</h1>
 
 The results of the analysis largely contradict the hypothesis I originally started with. The data shows that Non-Hispanic people have higher rates of chronic disease in all the analyzed categories, except for cancer. There are several potential reasons that might explain this conclusion:
 
-1. First, the lifestyles of Hispanic people may put them at a lower risk for chronic disease. Higher rates of occupation in manual labor like construction may actually help mitigate chronic diseases that develop as a result of an inactive lifestyle, like cardiovascular disease. 
+1. First, there's a chance that lifestyles of Hispanic people may put them at a lower risk for chronic disease. Higher rates of occupation in manual labor like construction may actually help mitigate chronic diseases that develop as a result of an inactive lifestyle, like cardiovascular disease. 
 
 2. This data may not be telling the whole story. Collecting data about Hispanic populations is hard in and of itself because methods of tracking race and ethnicity and health are not standardized across states. Most of the final data used was explicitly labeled as Hispanic, non-Hispanic white, or non-Hispanic black, which hopefully helped our results. However, a lot of the dataset was filtered out for the purposes of standardization to reach our final subset data frame, including excluding data that wasn’t explicitly in “cases per 100,000” units, and data that wasn’t racially stratified. The subsetting of the data could've introduced a bias. Therefore, there are many data points that are not in the final regression that could possibly provide a different outcome.
 
@@ -239,3 +242,18 @@ Because of these limitations, and because of the observational nature of the stu
 
 If I were to conduct this study better, I would organize a comprehensive survey of questions about chronic disease related indicators, and randomly assign the survey, ideally across all 50 states. The survey would collect gender, racial, and ethnicity data to cover more potential intersections between social determinants. The survey might still suffer from the limitation of possible underdiagnosis of certain chronic diseases in certain demographic groups, but it would present much cleaner, randomized data to be able to draw causal conclusions from.
 
+Thanks for reading :)
+
+<h1>Works Cited</h1>
+
+Boersma P, Black LI, Ward BW. Prevalence of Multiple Chronic Conditions Among US Adults, 2018. Prev Chronic Dis 2020;17:200130. DOI: http://dx.doi.org/10.5888/pcd17.200130
+
+"Hispanic Heritage Month: 2023." U.S. Census Bureau, 2023. https://www.census.gov/newsroom/facts-for-features/2023/hispanic-heritage-month.html
+
+Raghupathi, Wullianallur, and Viju Raghupathi. “An Empirical Study of Chronic Diseases in the United States: A Visual Analytics Approach.” International journal of environmental research and public health vol. 15,3 431. 1 Mar. 2018, doi:10.3390/ijerph15030431
+
+# Code
+
+```{r print-code, ref.label=knitr::all_labels(), echo = TRUE, eval=FALSE}
+
+```

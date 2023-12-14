@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/figure-html5/unnamed-chunk-1-2.png","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.25/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/kePrint-0.0.1/kePrint.js","index_files/lightable-0.0.1/lightable.css","index_files/popper-2.6.0/popper.min.js","index_files/tabwid-1.1.3/tabwid.css","index_files/tabwid-1.1.3/tabwid.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/figure-html5/unnamed-chunk-1-2.png","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.25/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/kePrint-0.0.1/kePrint.js","index_files/lightable-0.0.1/lightable.css","index_files/popper-2.6.0/popper.min.js","index_files/tabwid-1.1.3/tabwid.css","index_files/tabwid-1.1.3/tabwid.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1475,8 +1475,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
   <link href="index_files/tabwid-1.1.3/tabwid.css" rel="stylesheet" />
   <script src="index_files/tabwid-1.1.3/tabwid.js"></script>
-  <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
-  <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1548,7 +1546,10 @@ Data:
 <span>   unit <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"cases per 100,000"</span> <span class='op'>|</span> <span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"per 100,000 residents"</span> <span class='op'>|</span> </span>
 <span>                    <span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"per 100,000"</span>, <span class='st'>"100k"</span>, <span class='st'>"Other"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>unit</span> <span class='op'>==</span> <span class='st'>"100k"</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>Topic</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>'royalblue4'</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"Total cases (per 100,000)"</span>, y <span class='op'>=</span> <span class='st'>"CD Category"</span>, title <span class='op'>=</span> <span class='st'>"Distribution of Chronic Disease Indicators"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>Topic</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>'royalblue4'</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    x<span class='op'>=</span> <span class='st'>"Total cases (per 100,000)"</span>, y <span class='op'>=</span> <span class='st'>"CD Category"</span>, title <span class='op'>=</span> <span class='st'>"Distribution of Chronic Disease Indicators"</span></span>
+<span>    <span class='op'>)</span> <span class='op'>+</span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>overall_plot</span></span></code></pre>
 </div>
@@ -1572,7 +1573,12 @@ Results:
 <span>    <span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
 <span>    dis_mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
-<span>  <span class='op'>)</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    race_chr <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>       <span class='va'>Stratification1</span> <span class='op'>==</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='st'>"Hispanic"</span>,</span>
+<span>      <span class='va'>Stratification1</span> <span class='op'>!=</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='st'>"Non-Hispanic"</span></span>
+<span>    <span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>table1</span><span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>race</span>, <span class='va'>Topic</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
@@ -1589,22 +1595,21 @@ Results:
 <span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/relocate.html'>relocate</a></span><span class='op'>(</span><span class='va'>`0`</span>, .after <span class='op'>=</span> <span class='va'>`1`</span><span class='op'>)</span></span>
 <span></span>
-<span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Chronic Disease"</span>, <span class='st'>"Hispanic"</span>, <span class='st'>"Non-Hispanic"</span>, <span class='st'>"Health Difference"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Chronic Disease"</span>, <span class='st'>"Hispanic"</span>, <span class='st'>"Non-Hispanic"</span>, <span class='st'>"Difference in Means"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
 <colgroup>
-<col style="width: 48%" />
+<col style="width: 46%" />
 <col style="width: 12%" />
 <col style="width: 16%" />
-<col style="width: 22%" />
+<col style="width: 24%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Chronic Disease</th>
 <th style="text-align: right;">Hispanic</th>
 <th style="text-align: right;">Non-Hispanic</th>
-<th style="text-align: right;">Health Difference</th>
+<th style="text-align: right;">Difference in Means</th>
 </tr>
 </thead>
 <tbody>
@@ -1654,7 +1659,21 @@ Results:
 </table>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span> </span>
+<span></span>
+<span><span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>race_chr</span>, <span class='va'>Topic</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, <span class='va'>race_chr</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span></span>
+<span>    dis_mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Topic</span>, y <span class='op'>=</span> <span class='va'>dis_mean</span>, fill <span class='op'>=</span> <span class='va'>race_chr</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"dodge"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_fill_manual</a></span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"maroon"</span>,<span class='st'>"turquoise4"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Chronic Disease Topic"</span>, y<span class='op'>=</span> <span class='st'>"Average Cases (per 100,000)"</span>, fill <span class='op'>=</span> <span class='st'>"Hispanic (Y/N)"</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_discrete.html'>scale_x_discrete</a></span><span class='op'>(</span>labels <span class='op'>=</span> <span class='fu'><a href='https://scales.r-lib.org/reference/label_wrap.html'>label_wrap</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
@@ -1693,1224 +1712,218 @@ Results:
 <span>  <span class='fu'><a href='https://davidgohel.github.io/flextable/reference/bg.html'>bg</a></span><span class='op'>(</span><span class='fl'>4</span>, bg <span class='op'>=</span> <span class='st'>'lemonchiffon'</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://davidgohel.github.io/flextable/reference/autofit.html'>autofit</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
-<div class="tabwid"><style>.cl-7ce426ba{}.cl-7cdb3e7e{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7cdf06d0{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-7cdf1d96{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1da0{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1da1{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1daa{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dab{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1db4{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1db5{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1db6{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dbe{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dbf{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dc8{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dd2{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dd3{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1ddc{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1de6{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1df0{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1df1{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dfa{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1dfb{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e04{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e05{width:0.981in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e0e{width:1.258in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e18{width:1.899in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e22{width:1.347in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e23{width:1.61in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e2c{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e2d{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e2e{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e2f{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e36{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e37{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e40{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e4a{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e54{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cdf1e5e{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-7ce426ba'>
+<div class="tabwid"><style>.cl-3bc46600{}.cl-3bbbfede{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3bbf09da{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3bbf1d76{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d80{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d81{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d8a{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d94{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d95{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d9e{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1d9f{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1da0{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1da8{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1db2{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1db3{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1dbc{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1dc6{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1dc7{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1dc8{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1dda{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1ddb{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1ddc{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1de4{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1dee{width:0.981in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1def{width:1.258in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1df8{width:1.899in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1df9{width:1.347in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e02{width:1.61in;background-color:rgba(255, 250, 205, 1.00);vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e03{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e04{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e0c{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e16{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e17{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e18{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e20{width:1.258in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e21{width:1.899in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e2a{width:1.347in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bbf1e2b{width:1.61in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-3bc46600'>
 
 <caption style="display:table-caption;margin:0pt;text-align:center;border-bottom: 0.00pt solid transparent;border-top: 0.00pt solid transparent;border-left: 0.00pt solid transparent;border-right: 0.00pt solid transparent;padding-top:3pt;padding-bottom:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;">
 <span id="tab:unnamed-chunk-7">Table 1: </span><span>Chronic Disease Indicators in Hispanic vs Non-Hispanic Mortality</span>
 </caption>
 
-<thead><tr style="overflow-wrap:break-word;"><th class="cl-7cdf1d96"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"> </span></p></th><th class="cl-7cdf1da0"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Alcohol</span></p></th><th class="cl-7cdf1da0"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Cancer</span></p></th><th class="cl-7cdf1da1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Cardiovascular Disease</span></p></th><th class="cl-7cdf1daa"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Kidney Disease</span></p></th><th class="cl-7cdf1dab"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Pulmonary Disease</span></p></th><th class="cl-7cdf1da0"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Diabetes</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1db4"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">(Intercept)</span></p></td><td class="cl-7cdf1db5"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-1298.539</span></p></td><td class="cl-7cdf1db5"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">673.621</span></p></td><td class="cl-7cdf1db6"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-652.234</span></p></td><td class="cl-7cdf1dbe"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">1471.014</span></p></td><td class="cl-7cdf1dbf"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-967.226</span></p></td><td class="cl-7cdf1db5"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-4270.583</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1dc8"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"></span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 215.618</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 346.374</span></p></td><td class="cl-7cdf1dd3"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 344.773</span></p></td><td class="cl-7cdf1ddc"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 323.080</span></p></td><td class="cl-7cdf1de6"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 714.742</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 442.679</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1df0"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"></span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.052</span></p></td><td class="cl-7cdf1dfa"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.059</span></p></td><td class="cl-7cdf1dfb"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1e04"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.176</span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1e05"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Hispanic</span></p></td><td class="cl-7cdf1e0e"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-5.266</span></p></td><td class="cl-7cdf1e0e"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">2.594</span></p></td><td class="cl-7cdf1e18"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-65.331</span></p></td><td class="cl-7cdf1e22"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-35.839</span></p></td><td class="cl-7cdf1e23"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-91.802</span></p></td><td class="cl-7cdf1e0e"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-22.046</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1dc8"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"></span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.843</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.975</span></p></td><td class="cl-7cdf1dd3"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 1.328</span></p></td><td class="cl-7cdf1ddc"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 1.250</span></p></td><td class="cl-7cdf1de6"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 2.954</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 1.780</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1df0"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"></span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.008</span></p></td><td class="cl-7cdf1dfa"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1dfb"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1e04"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1dc8"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Year</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.652</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-0.313</span></p></td><td class="cl-7cdf1dd3"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.384</span></p></td><td class="cl-7cdf1ddc"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">-0.694</span></p></td><td class="cl-7cdf1de6"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.558</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">2.153</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1dc8"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"></span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.107</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.172</span></p></td><td class="cl-7cdf1dd3"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.171</span></p></td><td class="cl-7cdf1ddc"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.160</span></p></td><td class="cl-7cdf1de6"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.355</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">s.e. = 0.220</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1df0"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e"></span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.069</span></p></td><td class="cl-7cdf1dfa"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.025</span></p></td><td class="cl-7cdf1dfb"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td><td class="cl-7cdf1e04"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = 0.116</span></p></td><td class="cl-7cdf1df1"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">p = &lt;0.001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1e2c"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">Num.Obs.</span></p></td><td class="cl-7cdf1e2d"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">2688</span></p></td><td class="cl-7cdf1e2d"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">46112</span></p></td><td class="cl-7cdf1e2e"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">20338</span></p></td><td class="cl-7cdf1e2f"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">3938</span></p></td><td class="cl-7cdf1e36"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">6474</span></p></td><td class="cl-7cdf1e2d"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">5650</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1dc8"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">R2</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.027</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.000</span></p></td><td class="cl-7cdf1dd3"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.107</span></p></td><td class="cl-7cdf1ddc"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.176</span></p></td><td class="cl-7cdf1de6"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.130</span></p></td><td class="cl-7cdf1dd2"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.042</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cdf1e37"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">R2 Adj.</span></p></td><td class="cl-7cdf1e40"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.026</span></p></td><td class="cl-7cdf1e40"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.000</span></p></td><td class="cl-7cdf1e4a"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.106</span></p></td><td class="cl-7cdf1e54"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.176</span></p></td><td class="cl-7cdf1e5e"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.130</span></p></td><td class="cl-7cdf1e40"><p class="cl-7cdf06d0"><span class="cl-7cdb3e7e">0.041</span></p></td></tr></tbody></table></div>
+<thead><tr style="overflow-wrap:break-word;"><th class="cl-3bbf1d76"><p class="cl-3bbf09da"><span class="cl-3bbbfede"> </span></p></th><th class="cl-3bbf1d80"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Alcohol</span></p></th><th class="cl-3bbf1d80"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Cancer</span></p></th><th class="cl-3bbf1d81"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Cardiovascular Disease</span></p></th><th class="cl-3bbf1d8a"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Kidney Disease</span></p></th><th class="cl-3bbf1d94"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Pulmonary Disease</span></p></th><th class="cl-3bbf1d80"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Diabetes</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1d95"><p class="cl-3bbf09da"><span class="cl-3bbbfede">(Intercept)</span></p></td><td class="cl-3bbf1d9e"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-1298.539</span></p></td><td class="cl-3bbf1d9e"><p class="cl-3bbf09da"><span class="cl-3bbbfede">673.621</span></p></td><td class="cl-3bbf1d9f"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-652.234</span></p></td><td class="cl-3bbf1da0"><p class="cl-3bbf09da"><span class="cl-3bbbfede">1471.014</span></p></td><td class="cl-3bbf1da8"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-967.226</span></p></td><td class="cl-3bbf1d9e"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-4270.583</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1db2"><p class="cl-3bbf09da"><span class="cl-3bbbfede"></span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 215.618</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 346.374</span></p></td><td class="cl-3bbf1dbc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 344.773</span></p></td><td class="cl-3bbf1dc6"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 323.080</span></p></td><td class="cl-3bbf1dc7"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 714.742</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 442.679</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1dc8"><p class="cl-3bbf09da"><span class="cl-3bbbfede"></span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.052</span></p></td><td class="cl-3bbf1ddb"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.059</span></p></td><td class="cl-3bbf1ddc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1de4"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.176</span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1dee"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Hispanic</span></p></td><td class="cl-3bbf1def"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-5.266</span></p></td><td class="cl-3bbf1def"><p class="cl-3bbf09da"><span class="cl-3bbbfede">2.594</span></p></td><td class="cl-3bbf1df8"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-65.331</span></p></td><td class="cl-3bbf1df9"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-35.839</span></p></td><td class="cl-3bbf1e02"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-91.802</span></p></td><td class="cl-3bbf1def"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-22.046</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1db2"><p class="cl-3bbf09da"><span class="cl-3bbbfede"></span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.843</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.975</span></p></td><td class="cl-3bbf1dbc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 1.328</span></p></td><td class="cl-3bbf1dc6"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 1.250</span></p></td><td class="cl-3bbf1dc7"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 2.954</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 1.780</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1dc8"><p class="cl-3bbf09da"><span class="cl-3bbbfede"></span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.008</span></p></td><td class="cl-3bbf1ddb"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1ddc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1de4"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1db2"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Year</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.652</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-0.313</span></p></td><td class="cl-3bbf1dbc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.384</span></p></td><td class="cl-3bbf1dc6"><p class="cl-3bbf09da"><span class="cl-3bbbfede">-0.694</span></p></td><td class="cl-3bbf1dc7"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.558</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">2.153</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1db2"><p class="cl-3bbf09da"><span class="cl-3bbbfede"></span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.107</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.172</span></p></td><td class="cl-3bbf1dbc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.171</span></p></td><td class="cl-3bbf1dc6"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.160</span></p></td><td class="cl-3bbf1dc7"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.355</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">s.e. = 0.220</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1dc8"><p class="cl-3bbf09da"><span class="cl-3bbbfede"></span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.069</span></p></td><td class="cl-3bbf1ddb"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.025</span></p></td><td class="cl-3bbf1ddc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td><td class="cl-3bbf1de4"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = 0.116</span></p></td><td class="cl-3bbf1dda"><p class="cl-3bbf09da"><span class="cl-3bbbfede">p = &lt;0.001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1e03"><p class="cl-3bbf09da"><span class="cl-3bbbfede">Num.Obs.</span></p></td><td class="cl-3bbf1e04"><p class="cl-3bbf09da"><span class="cl-3bbbfede">2688</span></p></td><td class="cl-3bbf1e04"><p class="cl-3bbf09da"><span class="cl-3bbbfede">46112</span></p></td><td class="cl-3bbf1e0c"><p class="cl-3bbf09da"><span class="cl-3bbbfede">20338</span></p></td><td class="cl-3bbf1e16"><p class="cl-3bbf09da"><span class="cl-3bbbfede">3938</span></p></td><td class="cl-3bbf1e17"><p class="cl-3bbf09da"><span class="cl-3bbbfede">6474</span></p></td><td class="cl-3bbf1e04"><p class="cl-3bbf09da"><span class="cl-3bbbfede">5650</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1db2"><p class="cl-3bbf09da"><span class="cl-3bbbfede">R2</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.027</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.000</span></p></td><td class="cl-3bbf1dbc"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.107</span></p></td><td class="cl-3bbf1dc6"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.176</span></p></td><td class="cl-3bbf1dc7"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.130</span></p></td><td class="cl-3bbf1db3"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.042</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bbf1e18"><p class="cl-3bbf09da"><span class="cl-3bbbfede">R2 Adj.</span></p></td><td class="cl-3bbf1e20"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.026</span></p></td><td class="cl-3bbf1e20"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.000</span></p></td><td class="cl-3bbf1e21"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.106</span></p></td><td class="cl-3bbf1e2a"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.176</span></p></td><td class="cl-3bbf1e2b"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.130</span></p></td><td class="cl-3bbf1e20"><p class="cl-3bbf09da"><span class="cl-3bbbfede">0.041</span></p></td></tr></tbody></table></div>
 </div>
 <p>Here is the regression table of each of the chronic disease categories, adjusted for the variable of year to ensure that time was not a confounding variable.</p>
 <p>The main coefficients of interest are the coefficients in the “Hispanic” row. These coefficients represent the percentage point change in chronic disease indicator rates, comparing the Hispanic group to the non-Hispanic group. For example, under the alcohol category, there is a 5.3 percentage point decrease in alcohol indicator rates in the Hispanic group to the non-Hispanic group. And, the cancer category shows there is a 2.6 percentage point increase in cancer indicator rates in the Hispanic group compared to the non-Hispanic group. I think among the results, what especially stands out is the very large percentage point decreases in the Hispanic group for cardiovascular, kidney, and pulmonary disease, as well as diabetes, compared to non-Hispanics. Despite these largely lower CD rates overall, the Hispanic group has a higher cancer rate. However, at an alpha level of 0.05, the cancer coefficient is not statistically significant, while the other coefficients for alcohol, kidney disease, and diabetes are extremely statistically significant (&lt;0.001), and cardiovascular and pulmonary coefficients are statistically significant as well.</p>
-<p>Breaking down the data further, on a state level results are much less congruent than the national aggregates. Using the example of cardiovascular category, several states show strong increases in cardiovascular rates in Hispanic people, contrary to the strong negative coefficent as the national correlation estimate:</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/rmarkdown'>rmarkdown</a></span><span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>Card_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>LocationDesc</span>, data <span class='op'>=</span> <span class='va'>Cardio</span><span class='op'>)</span></span>
-<span></span>
-<span></span>
-<span><span class='va'>states</span> <span class='op'>&lt;-</span> <span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Card_lm</span>,</span>
-<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
-<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
-<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
-<span>  </span>
-<span><span class='va'>states</span></span></code></pre>
-</div>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:center;">
- (1)
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-(Intercept)
-</td>
-<td style="text-align:center;">
-137.472
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 3.888
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-race
-</td>
-<td style="text-align:center;">
-−63.051
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 1.314
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescAlaska
-</td>
-<td style="text-align:center;">
-−28.209
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.696
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescArizona
-</td>
-<td style="text-align:center;">
-−33.162
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.040
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescArkansas
-</td>
-<td style="text-align:center;">
-15.280
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.564
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.006
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescCalifornia
-</td>
-<td style="text-align:center;">
-−7.281
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.040
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.149
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescColorado
-</td>
-<td style="text-align:center;">
-−37.726
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.116
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescConnecticut
-</td>
-<td style="text-align:center;">
-−32.428
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.343
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescDelaware
-</td>
-<td style="text-align:center;">
-−4.120
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.936
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.488
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescDistrict of Columbia
-</td>
-<td style="text-align:center;">
-−5.710
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.936
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.336
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescFlorida
-</td>
-<td style="text-align:center;">
-−22.450
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.112
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescGeorgia
-</td>
-<td style="text-align:center;">
-−35.297
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.286
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescHawaii
-</td>
-<td style="text-align:center;">
-−7.828
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.566
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.160
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescIdaho
-</td>
-<td style="text-align:center;">
-−10.686
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.964
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.073
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescIllinois
-</td>
-<td style="text-align:center;">
-−19.742
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.243
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescIndiana
-</td>
-<td style="text-align:center;">
-−18.894
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.355
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescIowa
-</td>
-<td style="text-align:center;">
-−14.262
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.605
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.011
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescKansas
-</td>
-<td style="text-align:center;">
-−5.699
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.160
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.269
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescKentucky
-</td>
-<td style="text-align:center;">
-−7.102
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.665
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.210
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescLouisiana
-</td>
-<td style="text-align:center;">
-−10.244
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.275
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.052
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMaine
-</td>
-<td style="text-align:center;">
-2.611
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 8.011
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.744
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMaryland
-</td>
-<td style="text-align:center;">
-−30.849
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.280
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMassachusetts
-</td>
-<td style="text-align:center;">
-−46.537
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.275
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMichigan
-</td>
-<td style="text-align:center;">
-−3.590
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.071
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.479
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMinnesota
-</td>
-<td style="text-align:center;">
-−45.250
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.099
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMississippi
-</td>
-<td style="text-align:center;">
-30.809
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.666
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMissouri
-</td>
-<td style="text-align:center;">
-−16.675
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.238
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescMontana
-</td>
-<td style="text-align:center;">
-11.044
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 6.363
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.083
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNebraska
-</td>
-<td style="text-align:center;">
-−15.054
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.581
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.007
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNevada
-</td>
-<td style="text-align:center;">
-−6.324
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.133
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.218
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNew Hampshire
-</td>
-<td style="text-align:center;">
-−7.372
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 8.011
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.357
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNew Jersey
-</td>
-<td style="text-align:center;">
-−19.328
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.275
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNew Mexico
-</td>
-<td style="text-align:center;">
-−4.808
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.243
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.359
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNew York
-</td>
-<td style="text-align:center;">
-−16.516
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.083
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNorth Carolina
-</td>
-<td style="text-align:center;">
-−29.917
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.044
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescNorth Dakota
-</td>
-<td style="text-align:center;">
-25.361
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 6.645
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescOhio
-</td>
-<td style="text-align:center;">
-−20.615
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.222
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescOklahoma
-</td>
-<td style="text-align:center;">
-6.958
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.071
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.170
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescOregon
-</td>
-<td style="text-align:center;">
-−36.814
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.075
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescPennsylvania
-</td>
-<td style="text-align:center;">
-−16.406
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.259
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.002
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescRhode Island
-</td>
-<td style="text-align:center;">
-−12.520
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.732
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.029
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescSouth Carolina
-</td>
-<td style="text-align:center;">
-−16.597
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.355
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.002
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescSouth Dakota
-</td>
-<td style="text-align:center;">
-14.813
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 6.538
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.023
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescTennessee
-</td>
-<td style="text-align:center;">
-−12.319
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.367
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.022
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescTexas
-</td>
-<td style="text-align:center;">
-−26.185
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.091
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescUtah
-</td>
-<td style="text-align:center;">
-−34.886
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.368
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescVermont
-</td>
-<td style="text-align:center;">
-1.770
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 8.177
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = 0.829
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescVirginia
-</td>
-<td style="text-align:center;">
-−35.299
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.203
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescWashington
-</td>
-<td style="text-align:center;">
-−31.739
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.040
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescWest Virginia
-</td>
-<td style="text-align:center;">
-23.828
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 6.384
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescWisconsin
-</td>
-<td style="text-align:center;">
-−20.425
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 5.091
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-p = &lt;0.001
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LocationDescWyoming
-</td>
-<td style="text-align:center;">
-7.913
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:center;">
-s.e. = 6.600
-</td>
-</tr>
-<tr>
-<td style="text-align:left;box-shadow: 0px 1.5px">
-</td>
-<td style="text-align:center;box-shadow: 0px 1.5px">
-p = 0.231
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Num.Obs.
-</td>
-<td style="text-align:center;">
-20338
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-R2
-</td>
-<td style="text-align:center;">
-0.148
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-R2 Adj.
-</td>
-<td style="text-align:center;">
-0.146
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>The barplot helps visualize this finding, as the cancer disparity (dif in means) is visually smaller compared to the other bars’. “Overarching Conditions” is omitted in the regressions after the barplot because of its ambiguity in definition.</p>
 <h1>
 Conclusion:
 </h1>
 <p>The results of the analysis largely contradict the hypothesis I originally started with. The data shows that Non-Hispanic people have higher rates of chronic disease in all the analyzed categories, except for cancer. There are several potential reasons that might explain this conclusion:</p>
 <ol type="1">
-<li><p>First, the lifestyles of Hispanic people may put them at a lower risk for chronic disease. Higher rates of occupation in manual labor like construction may actually help mitigate chronic diseases that develop as a result of an inactive lifestyle, like cardiovascular disease.</p></li>
+<li><p>First, there’s a chance that lifestyles of Hispanic people may put them at a lower risk for chronic disease. Higher rates of occupation in manual labor like construction may actually help mitigate chronic diseases that develop as a result of an inactive lifestyle, like cardiovascular disease.</p></li>
 <li><p>This data may not be telling the whole story. Collecting data about Hispanic populations is hard in and of itself because methods of tracking race and ethnicity and health are not standardized across states. Most of the final data used was explicitly labeled as Hispanic, non-Hispanic white, or non-Hispanic black, which hopefully helped our results. However, a lot of the dataset was filtered out for the purposes of standardization to reach our final subset data frame, including excluding data that wasn’t explicitly in “cases per 100,000” units, and data that wasn’t racially stratified. The subsetting of the data could’ve introduced a bias. Therefore, there are many data points that are not in the final regression that could possibly provide a different outcome.</p></li>
 <li><p>Demographic shares could also be skewing our outcome. Currently, only around 19.1% of the population of the United States is Hispanic. Because the data source doesn’t clarify if the data values represent cases among the whole population or specifically among its ethnic group, it could be possible that there are going to be overwhelmingly more cases among white people because there is a demographic majority of white people living in the U.S.</p></li>
 </ol>
 <p>Because of these limitations, and because of the observational nature of the study, the results should not be used to determine causal conclusions.</p>
 <p>If I were to conduct this study better, I would organize a comprehensive survey of questions about chronic disease related indicators, and randomly assign the survey, ideally across all 50 states. The survey would collect gender, racial, and ethnicity data to cover more potential intersections between social determinants. The survey might still suffer from the limitation of possible underdiagnosis of certain chronic diseases in certain demographic groups, but it would present much cleaner, randomized data to be able to draw causal conclusions from.</p>
+<p>Thanks for reading :)</p>
+<h1>
+Works Cited
+</h1>
+<p>Boersma P, Black LI, Ward BW. Prevalence of Multiple Chronic Conditions Among US Adults, 2018. Prev Chronic Dis 2020;17:200130. DOI: <a href="http://dx.doi.org/10.5888/pcd17.200130" class="uri">http://dx.doi.org/10.5888/pcd17.200130</a></p>
+<p>“Hispanic Heritage Month: 2023.” U.S. Census Bureau, 2023. <a href="https://www.census.gov/newsroom/facts-for-features/2023/hispanic-heritage-month.html" class="uri">https://www.census.gov/newsroom/facts-for-features/2023/hispanic-heritage-month.html</a></p>
+<p>Raghupathi, Wullianallur, and Viju Raghupathi. “An Empirical Study of Chronic Diseases in the United States: A Visual Analytics Approach.” International journal of environmental research and public health vol. 15,3 431. 1 Mar. 2018, <a href="doi:10.3390/ijerph15030431" class="uri">doi:10.3390/ijerph15030431</a></p>
+<h1 id="code">Code</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>cdi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"C:/Users/18mia/Downloads/U.S._Chronic_Disease_Indicators__CDI_.csv"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>overall_plot</span> <span class='op'>&lt;-</span> <span class='va'>cdi</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>   unit <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"cases per 100,000"</span> <span class='op'>|</span> <span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"per 100,000 residents"</span> <span class='op'>|</span> </span>
+<span>                    <span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"per 100,000"</span>, <span class='st'>"100k"</span>, <span class='st'>"Other"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>unit</span> <span class='op'>==</span> <span class='st'>"100k"</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>Topic</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>'royalblue4'</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    x<span class='op'>=</span> <span class='st'>"Total cases (per 100,000)"</span>, y <span class='op'>=</span> <span class='st'>"CD Category"</span>, title <span class='op'>=</span> <span class='st'>"Distribution of Chronic Disease Indicators"</span></span>
+<span>    <span class='op'>)</span> <span class='op'>+</span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>overall_plot</span></span>
+<span></span>
+<span></span>
+<span><span class='va'>comp_Hisp</span> <span class='op'>&lt;-</span> <span class='va'>cdi</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>   unit <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"cases per 100,000"</span> <span class='op'>|</span> <span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"per 100,000 residents"</span> <span class='op'>|</span> </span>
+<span>                    <span class='va'>DataValueUnit</span> <span class='op'>==</span> <span class='st'>"per 100,000"</span>, <span class='st'>"100k"</span>, <span class='st'>"Other"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>unit</span> <span class='op'>==</span> <span class='st'>"100k"</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>StratificationCategory1</span> <span class='op'>==</span> <span class='st'>"Race/Ethnicity"</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    race <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>      <span class='va'>Stratification1</span> <span class='op'>==</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='fl'>1</span>,</span>
+<span>      <span class='va'>Stratification1</span> <span class='op'>!=</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='fl'>0</span></span>
+<span>    <span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    dis_mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    race_chr <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>       <span class='va'>Stratification1</span> <span class='op'>==</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='st'>"Hispanic"</span>,</span>
+<span>      <span class='va'>Stratification1</span> <span class='op'>!=</span> <span class='st'>"Hispanic"</span> <span class='op'>~</span> <span class='st'>"Non-Hispanic"</span></span>
+<span>    <span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>table1</span><span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>race</span>, <span class='va'>Topic</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, <span class='va'>race</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span></span>
+<span>    dis_mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
+<span>    names_from <span class='op'>=</span> <span class='va'>race</span>,</span>
+<span>    values_from <span class='op'>=</span> <span class='va'>dis_mean</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    ATE <span class='op'>=</span> <span class='va'>`1`</span> <span class='op'>-</span> <span class='va'>`0`</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/relocate.html'>relocate</a></span><span class='op'>(</span><span class='va'>`0`</span>, .after <span class='op'>=</span> <span class='va'>`1`</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Chronic Disease"</span>, <span class='st'>"Hispanic"</span>, <span class='st'>"Non-Hispanic"</span>, <span class='st'>"Difference in Means"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span> </span>
+<span></span>
+<span><span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>race_chr</span>, <span class='va'>Topic</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, <span class='va'>race_chr</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span></span>
+<span>    dis_mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Topic</span>, y <span class='op'>=</span> <span class='va'>dis_mean</span>, fill <span class='op'>=</span> <span class='va'>race_chr</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"dodge"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_fill_manual</a></span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"maroon"</span>,<span class='st'>"turquoise4"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Chronic Disease Topic"</span>, y<span class='op'>=</span> <span class='st'>"Average Cases (per 100,000)"</span>, fill <span class='op'>=</span> <span class='st'>"Hispanic (Y/N)"</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_discrete.html'>scale_x_discrete</a></span><span class='op'>(</span>labels <span class='op'>=</span> <span class='fu'><a href='https://scales.r-lib.org/reference/label_wrap.html'>label_wrap</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/tidymodels/infer'>infer</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Alc</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Alcohol"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Alc_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Alc</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Alc_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Cancer</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Cancer"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Canc_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span>, data <span class='op'>=</span> <span class='va'>Cancer</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Canc_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Cardio</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Cardiovascular Disease"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Card_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span>, data <span class='op'>=</span> <span class='va'>Cardio</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Card_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Kidney</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Chronic Kidney Disease"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Kidn_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span>, data <span class='op'>=</span> <span class='va'>Kidney</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Kidn_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Pulm</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Chronic Obstructive Pulmonary Disease"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Pulm_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span>, data <span class='op'>=</span> <span class='va'>Pulm</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Pulm_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Diabetes</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Diabetes"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Diab_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span>, data <span class='op'>=</span> <span class='va'>Diabetes</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Diab_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Overarching</span> <span class='op'>&lt;-</span> <span class='va'>comp_Hisp</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Topic</span> <span class='op'>==</span> <span class='st'>"Overarching Conditions"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Over_lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span>, data <span class='op'>=</span> <span class='va'>Overarching</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>Over_lm</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://modelsummary.com'>modelsummary</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ardata-fr.github.io/flextable-book/'>flextable</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>models</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span></span>
+<span>  <span class='st'>"Alcohol"</span>     <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Alc</span><span class='op'>)</span>,</span>
+<span>  <span class='st'>"Cancer"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Cancer</span><span class='op'>)</span>,</span>
+<span>  <span class='st'>"Cardiovascular Disease"</span>     <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Cardio</span><span class='op'>)</span>,</span>
+<span>  <span class='st'>"Kidney Disease"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Kidney</span><span class='op'>)</span>,</span>
+<span>  <span class='st'>"Pulmonary Disease"</span>     <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Pulm</span><span class='op'>)</span>,</span>
+<span>  <span class='st'>"Diabetes"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>DataValueAlt</span> <span class='op'>~</span> <span class='va'>race</span> <span class='op'>+</span> <span class='va'>YearStart</span>, data <span class='op'>=</span> <span class='va'>Diabetes</span><span class='op'>)</span></span>
+<span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>coef_map</span> <span class='op'>&lt;-</span>  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(Intercept)"</span> <span class='op'>=</span> <span class='st'>"(Intercept)"</span>,</span>
+<span>                         <span class='st'>"race"</span> <span class='op'>=</span> <span class='st'>"Hispanic"</span>,</span>
+<span>                          <span class='st'>"YearStart"</span> <span class='op'>=</span> <span class='st'>"Year"</span>,</span>
+<span>                          <span class='st'>"Num.Obs"</span> <span class='op'>=</span> <span class='st'>"Num.Obs"</span>,</span>
+<span>                          <span class='st'>"R2"</span> <span class='op'>=</span> <span class='st'>"R2"</span>,</span>
+<span>                          <span class='st'>"R2 Adj."</span> <span class='op'>=</span> <span class='st'>"R2 Adj."</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>tab</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>models</span>, coef_map <span class='op'>=</span> <span class='va'>coef_map</span>, output <span class='op'>=</span> <span class='st'>"flextable"</span>,</span>
+<span>             title <span class='op'>=</span> <span class='st'>"Chronic Disease Indicators in Hispanic vs Non-Hispanic Mortality"</span>, </span>
+<span>             statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                  <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>  </span>
+<span><span class='va'>tab</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://davidgohel.github.io/flextable/reference/bg.html'>bg</a></span><span class='op'>(</span><span class='fl'>4</span>, bg <span class='op'>=</span> <span class='st'>'lemonchiffon'</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://davidgohel.github.io/flextable/reference/autofit.html'>autofit</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
